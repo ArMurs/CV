@@ -1,0 +1,193 @@
+body {
+	background-color : #FFFFFF ;
+	font-family : Noto sans, sans-serif ;
+
+	/* --couleur1: #1a2b3c  ; */
+	--couleur1 : #170040  ;
+	--couleur2 : #101010 ;
+
+	--couleur3 : #4500C0 ;
+
+}
+
+
+#titre{
+	display : block;
+	width : 1000px ;
+	height: 170px ;
+	background-color : var(--couleur1) ;
+	color : #FFFFFF ;
+
+	font-weight: 400;
+}
+
+#oreille {
+	display : inline-block ;
+	width : 800px;
+	height : 170px;
+}
+
+#nom {
+	display : block ;
+	padding-top: 15px;
+	padding-left: 50px;
+	font-size: 60;
+
+}
+
+
+
+#poste{
+    /*background-color : #1189f2a3 ;*/
+	display : block ;
+	padding-top: 20px ;
+	padding-left: 100px;
+    padding-right: 50px;
+	font-size: 40;
+    font-variant: small-caps;
+
+}
+
+#accroche{
+    /* background-color : #760081bc ; */
+	display : block ;
+    text-align: justify;
+	padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+	font-size: 30;
+	font-weight: 500;
+
+}
+
+#motsCles{
+    /*background-color : #cae20dcd ;*/
+	display : block ;
+	padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: right;
+	font-size: 16;
+
+}
+
+
+#resume {
+    
+	display : block ;
+    padding : 20px;
+	padding-right: 30px;
+
+	font-size: 20;
+	text-align: right;
+	font-style: italic;
+}
+
+
+
+
+
+#cote{
+	display : block;
+	float:  left;
+	width : 300px ;
+	height: 1245px ;
+
+	background-color : var(--couleur2) ;
+}
+
+#photo {
+	display: block;
+	align-content: center;
+	margin :auto ;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width : 250px ;
+	border-radius: 50%;
+}
+
+#logo {
+	display: inline-flex;
+	margin-right: 5px;
+	height : 20px ;
+	filter : invert();
+}
+
+#information {
+	display: inline-flex;
+	align-items: center;
+	margin: 5px ;
+	margin-left: 15px;
+	padding-left: 0px ;
+
+	font-size: 18;
+	color: #FFFFFF;
+}
+
+#competence {
+	display : block;
+	width : 260px ;
+	margin: 10px;
+	margin-right: 15px;
+	margin-left: 15px;
+
+	font-size: 18;
+	color: #FFFFFF;
+}
+
+
+#contenu{
+	display : block ;
+	float:  left;	
+	width : 700px ;
+	height: 1245px ;
+	background-color : #FFFFFF ;
+}
+
+
+.rubrique{
+	padding-left: 30px ;
+	padding-top: 10px ;
+
+	font-size: 30;
+}
+
+.gauche {
+	color : #FFFFFF;
+}
+.droite{
+	color : var(--couleur1);
+}
+
+
+#item {
+	display : block ;
+	margin: 15px;
+	width : 680px ; 
+	font-size: 18;
+
+}
+
+#date {
+	display : inline-block;
+	width : 150px ;
+	text-align: right;
+	vertical-align: top;
+	padding-right: 20px;
+}
+
+#experience {
+	display: inline-block;
+	width : 500px;
+	text-align: left;
+}
+
+#commentaire {
+	display: block;
+	font-size: 16;
+	padding-left: 40px;
+	text-align: left;
+	font-style: italic;
+
+}

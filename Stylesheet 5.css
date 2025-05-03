@@ -1,0 +1,225 @@
+@font-face{
+    font-family : Helvetica ;
+    src : url(Helvetica.ttf) ;
+}
+
+body {
+    background-color: var(--color1);
+    color : var(--color3) ;
+    font-family: Helvetica;
+    font-size: 1.1rem;
+    /* font-family: Arial, Helvetica, sans-serif; */
+
+
+    --color1 : #0a0a0a ;
+    --color2 : #8b8b8b ;
+    --color3 : #c0d0d0 ;
+    --color4 : #90f0f0 ;
+
+    --color5 : #300089 ;
+    --color6 : #5b001e ;
+
+    border : solid 1px var(--color4) ;
+
+    width: 1000px;
+    height: 1415px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+body.printable {
+    background-color: #FFFFFF;
+    color : var(--color1) ;
+}
+/*
+    HEADER / En tête
+        > LEFT : Nom / Description
+        > RIGHT : QR CODE / Resume
+*/
+
+h1, h2, h3 {
+    color : white ;
+    position : relative;
+    content : attr(content) ;
+}
+
+.content.printable h3 {
+    color: var(--color5);
+}
+
+h1::before, h2::before {
+    content : attr(content) ;
+
+    position : absolute ;
+    top : 0 ;
+    left : 0 ;
+
+    color : var(--color4) ;
+    filter : blur(5px) ;
+
+    /* https://www.geeksforgeeks.org/double-layered-text-effect-using-css/ */
+}
+
+h1.printable::before, h2.printable::before {
+    display : none ;
+}
+
+header {
+    flex : 10% ;
+    
+    display: flex;
+    flex-direction: row;
+
+
+    gap: 20px;
+    padding: 20px;
+
+    /* background-color: var(--color1); */
+    /* color: var(--color3); */
+
+}
+
+header.printable {
+    background : linear-gradient(0.45turn , var(--color5), var(--color6));
+    color : white ;
+}
+
+header .left {
+    flex: 60% ;
+
+}
+
+header .right {
+    flex: 40%;
+    text-align: justify;
+}
+
+/*
+    MIDDLE / Permet juste de séparer le reste de la page en deux.
+*/
+
+.middle {
+    display: flex;
+    flex-direction: row;
+
+    flex : 90%
+}
+
+
+/*
+    SIDE / Infos
+        > PROFILE / Photo de profil
+*/
+
+.side {
+    flex: 30%;
+    /* background-color: var(--color2); */
+
+    padding : 20px ;
+}
+
+.side.printable {
+    background-color: var(--color1);
+    color : var(--color3) ;
+}
+.logo {
+	display: inline-flex;
+	margin-right: 5px;
+	height : 20px ;
+	filter : invert();
+}
+
+.profile {
+    display: block;
+	margin : auto ;
+	max-width : 250px ;
+	border-radius: 50%;
+}
+
+.side ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+/*
+    CONTENT / contenu
+        > qlskdj
+*/
+
+.content {
+    flex : 70% ;
+    /* background-color: var(--color3); */
+    padding: 20px ;
+}
+/*
+    COLLAPSABLE / Fenêtres Réductibles
+        > COLLAPSABLE HEADER / En tête 
+        > COLLAPSABLE BODY / Contenu de la fenêtre
+*/
+
+.collapsable {
+    display: flex ;
+    flex-direction: column;
+
+    overflow: hidden ;
+    gap : 0px ;
+
+    margin : 10px 0px ;
+}
+
+    .collapsableHeader {
+        /* flex : 20% ; */
+
+        display: flex ;
+        flex-direction: row;
+        gap : 20px ;
+
+    }
+
+        .collapsableDate {
+            flex : 20% ;
+            text-align: right;
+        }
+
+        .collapsableTitle {
+            flex: 75%;
+        }
+
+        .collapsableButton {
+            flex : 5% ;
+        }
+
+
+    .collapsableMain {
+        /* flex : 80% ; */
+
+        display: flex ;
+        flex-direction: row;
+        gap : 20px ;
+
+        max-height : 250px;
+        transition : all 0.5s ease-in-out;
+
+        
+    }
+
+    .collapsableMain.collapsed {
+        max-height : 0px ;
+    }
+
+        .collapsableBlankLeft {
+            display: block;
+            flex : 20% ;
+        }
+
+        .collapsableBody {
+            display: block;
+            flex : 75%;
+        }
+
+        .collapsableBlankRight {
+            display: block;
+            flex : 5% ;
+        }
