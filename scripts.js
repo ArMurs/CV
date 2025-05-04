@@ -84,11 +84,12 @@ function createCollapsable(date, place, title, body) {
         </div>
     `;
 
-
+    const header = wrapper.children[0] ;
+    const bouton = header.children[2]
     
     if (!thisIsThePrintableVersion) {
 
-        const header = wrapper.children[0] ;
+
         const main = wrapper.children[1] ;
 
         // Fermer tous les blocs au chargement
@@ -96,8 +97,9 @@ function createCollapsable(date, place, title, body) {
 
         // Ajouter un toggle au clic sur l'en-tête
         header.addEventListener("click", () => {
-        main.classList.toggle("collapsed");
-    }) ;
+            main.classList.toggle("collapsed");
+            bouton.classList.toggle("collapsed") ;
+        }) ;
 
     }
        
