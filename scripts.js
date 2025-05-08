@@ -23,7 +23,7 @@ for (let element of collapsableHeaderList) {
 */
 
 const urlParams = new URLSearchParams(window.location.search) ;
-const thisIsThePrintableVersion = urlParams.get('isThePrintableVersion') ? true : false ;
+const thisIsThePrintableVersion = urlParams.get('isThePrintableVersion') == "true" ? true : false ;
 
 console.log(thisIsThePrintableVersion ? "This IS !" : "This isn't ...") ;
 
@@ -32,9 +32,14 @@ if (thisIsThePrintableVersion) {
     document.querySelector('body').classList.add("printable") ;
     document.querySelector('header').classList.add("printable") ;
     document.querySelector('.side').classList.add("printable") ;
+    document.querySelector('.content').classList.add("printable") ;
+
     document.querySelector('h1').classList.add("printable") ;
     document.querySelector('h2').classList.add("printable") ;
-    document.querySelector('.content').classList.add("printable") ;
+    document.querySelectorAll('h3').forEach(children => {
+        children.classList.add("printable") ;
+    });
+
 }
 
 /* "Va chercher les biens !"

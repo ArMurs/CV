@@ -1,15 +1,8 @@
-@font-face{
-    font-family : Helvetica ;
-    src : url(Helvetica.ttf) ;
-}
-
 body {
     background-color: var(--color1);
     color : var(--color3) ;
-    font-family: Helvetica;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
-    /* font-family: Arial, Helvetica, sans-serif; */
-
 
     --color1 : #0a0a0a ;
     --color2 : #8b8b8b ;
@@ -19,7 +12,7 @@ body {
     --color5 : #300089 ;
     --color6 : #5b001e ;
 
-    border : solid 1px var(--color4) ;
+    /* border : solid 1px var(--color4) ; */
 
     width: 1000px;
     height: 1415px;
@@ -42,28 +35,23 @@ h1, h2, h3 {
     color : white ;
     position : relative;
     content : attr(content) ;
+
+    text-shadow:
+        0 0 2px #00ffff,
+        0 0 5px #00ffff,
+        0 0 10px #00aaaa,
+        0 0 15px #007777;
 }
+
+h1.printable, h2.printable, h3.printable {
+    text-shadow : none ;
+}
+
 
 .content.printable h3 {
     color: var(--color5);
 }
 
-h1::before, h2::before {
-    content : attr(content) ;
-
-    position : absolute ;
-    top : 0 ;
-    left : 0 ;
-
-    color : var(--color4) ;
-    filter : blur(5px) ;
-
-    /* https://www.geeksforgeeks.org/double-layered-text-effect-using-css/ */
-}
-
-h1.printable::before, h2.printable::before {
-    display : none ;
-}
 
 header {
     flex : 10% ;
